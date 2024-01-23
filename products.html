@@ -103,13 +103,14 @@
                       <!-- 圖片 -->
                       <img class="img-fluid" :src="image">
                     </div>
-                    <!-- 如果 沒有陣列長度 或 陣列最後一個索引有東西 -->
+                    <!-- 如果 沒有圖片 或 陣列最後一個索引有東西 -->
                     <div v-if="!tempProduct.imagesUrl.length || tempProduct.imagesUrl[tempProduct.imagesUrl.length - 1]">
                       <button class="btn btn-outline-primary btn-sm d-block w-100"
                         @click="tempProduct.imagesUrl.push('')">
                         新增圖片
                       </button>
                     </div>
+                    <!-- 陣列最後一個是空的 -->
                     <div v-else>
                       <button class="btn btn-outline-danger btn-sm d-block w-100" @click="tempProduct.imagesUrl.pop()">
                         刪除圖片
